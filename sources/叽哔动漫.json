@@ -1,0 +1,66 @@
+{
+ "factoryId": "web-selector",
+ "version": 2,
+ "arguments": {
+  "name": "叽哔动漫",
+  "description": "",
+  "iconUrl": "https://www.jibi.cc/upload/mxprocms/20240530-1/811f55cb787194c59e3f6d1d8724571c.jpg",
+  "searchConfig": {
+   "searchUrl": "https://www.jibi.cc/index.php/vod/search.html?wd={keyword}",
+   "searchUseOnlyFirstWord": false,
+   "searchRemoveSpecial": true,
+   "searchUseSubjectNamesCount": 1,
+   "rawBaseUrl": "",
+   "requestInterval": 3000,
+   "subjectFormatId": "indexed",
+   "selectorSubjectFormatA": {
+    "selectLists": "div.module-card-item-title > a",
+    "preferShorterName": true
+   },
+   "selectorSubjectFormatIndexed": {
+    "selectNames": ".module-card-item-title > a",
+    "selectLinks": ".module-card-item-title > a",
+    "preferShorterName": true
+   },
+   "selectorSubjectFormatJsonPathIndexed": {
+    "selectLinks": "$[*]['url', 'link']",
+    "selectNames": "$[*]['title','name']",
+    "preferShorterName": true
+   },
+   "channelFormatId": "index-grouped",
+   "selectorChannelFormatFlattened": {
+    "selectChannelNames": ".module-tab-item.tab-item",
+    "matchChannelName": "^(?<ch>.+?)$",
+    "selectEpisodeLists": ".module-play-list-content",
+    "selectEpisodesFromList": "a",
+    "selectEpisodeLinksFromList": "",
+    "matchEpisodeSortFromName": "第\\s*(?<ep>\\d+)"
+   },
+   "selectorChannelFormatNoChannel": {
+    "selectEpisodes": "div.module-blocklist > div > a",
+    "selectEpisodeLinks": "a",
+    "matchEpisodeSortFromName": "第\\s*(?<ep>\\d+)"
+   },
+   "defaultResolution": "1080P",
+   "defaultSubtitleLanguage": "CHS",
+   "onlySupportsPlayers": [],
+   "filterByEpisodeSort": true,
+   "filterBySubjectName": true,
+   "selectMedia": {
+    "distinguishSubjectName": true,
+    "distinguishChannelName": true
+   },
+   "matchVideo": {
+    "enableNestedUrl": true,
+    "matchNestedUrl": "^.+(m3u8|cdn|vip|xigua\\.php).+\\?",
+    "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(m3u8)).*(\\?.+)?)|(akamaized)|(bilivideo.com)",
+    "cookies": "quality=1080",
+    "addHeadersToVideo": {
+     "referer": "",
+     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
+    }
+   }
+  },
+  "tier": 0
+ }
+}
