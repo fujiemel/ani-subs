@@ -9,14 +9,17 @@ Animeko 的「数据源」是一个 JSON 订阅，客户端按里面的 CSS 选�
 
 ## 订阅地址
 
+首选（jsDelivr CDN 加速，国内可直连）：
+
 ```
-https://raw.githubusercontent.com/fujiemel/ani-subs/main/ani-subs.json
+https://cdn.jsdelivr.net/gh/fujiemel/ani-subs@main/ani-subs.json
 ```
 
 在 Animeko 里：设置 → 数据源管理 → 添加订阅 → 粘贴上面的地址。
 
-> 如果 raw.githubusercontent.com 打不开（国内常见），可以用镜像前缀：
-> `https://ghfast.top/https://raw.githubusercontent.com/...`
+> jsDelivr 有缓存：仓库更新后，巡查任务会主动刷缓存，一般几分钟内生效；等不及可换下面的实时地址。
+> 备用 1（ghfast 实时代理，无缓存延迟）：`https://ghfast.top/https://raw.githubusercontent.com/fujiemel/ani-subs/main/ani-subs.json`
+> 备用 2（GitHub 原始地址，国内可能打不开）：`https://raw.githubusercontent.com/fujiemel/ani-subs/main/ani-subs.json`
 
 ## 文件
 
