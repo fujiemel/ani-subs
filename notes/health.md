@@ -30,3 +30,15 @@
 | 稀饭动漫 | L1（机房） | - | - | 机房能搜到，与首轮家宽 L0 相反，属视角差异 |
 
 发布决定：ani-subs.json 首发 5 源，后端互不重复——girigiri（tier 0）、叽哔动漫（tier 0，L4）、wedm（tier 1，L4）、森之屋动漫（tier 1，L3）、海星动漫（tier 1，L3）。番茄与叽哔同后端（bfvvs）且仅 720P，未收；黑猫与海星同后端（cdnlz14），未收。
+
+## 2026-11-19 第三轮（机房视角，Muse，关键词：葬送的芙莉莲）
+
+| 源 | 最高层 | 线路 | 集数 | 备注 |
+|---|---|---|---|---|
+| girigiri愛動漫 | L4 | 2（简中/繁中） | 20 | API code=1；详情页 2 线路 20 集；播放页 player_aaaa（encrypt=2）解码得 MP4 直链 ana.girigirilove.com，206 可达 |
+| 叽哔动漫 | L4 | - | 40 | m3u8-media 已验证（322 segments）；后端由 hn.bfvvs.com 变为 play.xluuss.com，仍 L4 |
+| wedm | L3（机房观察） | - | 12 | 播放页能拿到 m3u8 直链 vip.dytt-cinema.com，但机房直连 403（带 Referer 亦然）；疑似机房 IP 被 CDN 挡，非选择器问题，本轮只记观察、不修规则；连续两轮机房失败再按坏源处理 |
+| 森之屋动漫 | L3 | 1 | 28 | 与基线持平；播放页无直链 |
+| 海星动漫 | L3 | 7 | 168 | 与基线持平；搜索首条为未开播的第三季条目（0 集），取第一季验证 7 线路 168 集，播放页无直链 |
+
+说明：本轮修了巡查脚本两个测试端问题——subjectFormatId 为 a 的源需用 selectLists 取条目；本机出口代理 keep-alive 复用会间歇性 ProxyError，改为每次请求新建连接。5 个源的规则本身均未改动，ani-subs.json 无变化。
